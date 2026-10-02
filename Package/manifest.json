@@ -1,0 +1,10 @@
+{
+  "name": "DisableHellbroth",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/cjayride/Cjayride.DisableHellbroth",
+  "description": "Hard-disables PotionsPlus Hellbroth potions: strips recipes (including workbench upgrade-tab bypass) and blocks use. Server and client.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2351",
+    "OdinPlus-PotionPlus-4.3.8"
+  ]
+}
