@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- Remove Odins Alchemy Wand from ObjectDB so it cannot be gambled, crafted, or spawned as an item. Hellbroth recipe and use blocks also cover the wand.
+
 ## 1.0.0
 
 - Strip Hellbroth recipes from ObjectDB (including after PotionsPlus re-registers).

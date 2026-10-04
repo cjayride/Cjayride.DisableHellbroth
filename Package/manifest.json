@@ -1,8 +1,8 @@
 {
   "name": "DisableHellbroth",
-  "version_number": "1.0.0",
+  "version_number": "1.0.1",
   "website_url": "https://github.com/cjayride/Cjayride.DisableHellbroth",
-  "description": "Hard-disables PotionsPlus Hellbroth potions: strips recipes (including workbench upgrade-tab bypass) and blocks use. Server and client.",
+  "description": "Hard-disables PotionsPlus Hellbroth potions and Odins Alchemy Wand: strips recipes, removes the wand from the item list, and blocks use. Server and client.",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.2351",
     "OdinPlus-PotionPlus-4.3.8"

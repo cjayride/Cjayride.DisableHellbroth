@@ -14,7 +14,7 @@ namespace Cjayride.DisableHellbroth
     {
         public const string PluginGuid = "cjayride.DisableHellbroth";
         public const string PluginName = "Disable Hellbroth";
-        public const string PluginVersion = "1.0.0";
+        public const string PluginVersion = "1.0.1";
 
         internal static BepInEx.Logging.ManualLogSource Log;
 
@@ -25,7 +25,7 @@ namespace Cjayride.DisableHellbroth
             var go = new GameObject("Cjayride.DisableHellbroth.Purge");
             DontDestroyOnLoad(go);
             go.AddComponent<DelayedRecipePurge>();
-            Logger.LogInfo("Hellbroth potions: recipes purged and craft/use blocked (PotionsPlus Disabled bypass fix).");
+            Logger.LogInfo("Hellbroth potions and Odins Alchemy Wand: recipes purged, wand removed from ObjectDB, craft/use blocked.");
         }
     }
 
@@ -33,8 +33,23 @@ namespace Cjayride.DisableHellbroth
     {
         internal static bool IsHellbroth(string name)
         {
-            return !string.IsNullOrEmpty(name)
-                   && name.IndexOf("Hellbroth", StringComparison.OrdinalIgnoreCase) >= 0;
+            if (string.IsNullOrEmpty(name))
+                return false;
+
+            if (name.IndexOf("Hellbroth", StringComparison.OrdinalIgnoreCase) >= 0)
+                return true;
+
+            return IsAlchemyWand(name);
+        }
+
+        internal static bool IsAlchemyWand(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+                return false;
+
+            return name.IndexOf("OdinsAlchemyWand", StringComparison.OrdinalIgnoreCase) >= 0
+                   || name.IndexOf("Odins_Alchemy_Wand", StringComparison.OrdinalIgnoreCase) >= 0
+                   || name.IndexOf("Alchemy Wand", StringComparison.OrdinalIgnoreCase) >= 0;
         }
 
         internal static bool IsHellbroth(ItemDrop.ItemData item)
@@ -64,6 +79,16 @@ namespace Cjayride.DisableHellbroth
             int removed = db.m_recipes.RemoveAll(HellbrothIds.IsHellbroth);
             if (removed > 0)
                 Plugin.Log?.LogInfo($"Removed {removed} Hellbroth recipe(s) from ObjectDB.");
+
+            if (db.m_items == null)
+                return;
+
+            int items = db.m_items.RemoveAll(go => go != null && HellbrothIds.IsAlchemyWand(go.name));
+            if (items > 0)
+            {
+                db.UpdateRegisters();
+                Plugin.Log?.LogInfo($"Removed Odins Alchemy Wand from ObjectDB ({items} prefab(s)).");
+            }
         }
     }
 
