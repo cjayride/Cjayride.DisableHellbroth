@@ -1,6 +1,6 @@
 {
   "name": "DisableHellbroth",
-  "version_number": "1.0.1",
+  "version_number": "1.0.2",
   "website_url": "https://github.com/cjayride/Cjayride.DisableHellbroth",
   "description": "Hard-disables PotionsPlus Hellbroth potions and Odins Alchemy Wand: strips recipes, removes the wand from the item list, and blocks use. Server and client.",
   "dependencies": [

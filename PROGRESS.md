@@ -1,7 +1,7 @@
 # DisableHellbroth — Valheim 1.0.21 release
 
 ## Goal
-- Verify Release build against Valheim 1.0.21, update BepInExPack to 5.4.2360, changelog, Thunderstore `/dist` zip, git tag `v1.0.1`.
+- Verify Release build against Valheim 1.0.21, update BepInExPack to 5.4.2360, changelog, Thunderstore `/dist` zip, git tag `v1.0.2` (v1.0.1 already on GitHub).
 
 ## Status
 - Completed
@@ -11,9 +11,9 @@
 
 ## Changes
 - `Package/manifest.json` — BepInEx `denikson-BepInExPack_Valheim-5.4.2360`.
-- CHANGELOG (root + Package) — Valheim 1.0.21 + BepInEx notes under 1.0.1.
+- Version 1.0.2 in csproj, Plugin.cs, manifest; CHANGELOG 1.0.2 section.
 - `dist/` Thunderstore staging (zip gitignored).
 
 ## Output
 - DLL: `D:\AI-Agent-Projects\cjaycraft\Cjayride.DisableHellbroth\bin\Release\net481\Cjayride.DisableHellbroth.dll`
-- Zip: `D:\AI-Agent-Projects\cjaycraft\Cjayride.DisableHellbroth\dist\cjayride-DisableHellbroth-1.0.1.zip`
+- Zip: `D:\AI-Agent-Projects\cjaycraft\Cjayride.DisableHellbroth\dist\cjayride-DisableHellbroth-1.0.2.zip`

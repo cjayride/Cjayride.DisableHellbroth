@@ -14,7 +14,7 @@ namespace Cjayride.DisableHellbroth
     {
         public const string PluginGuid = "cjayride.DisableHellbroth";
         public const string PluginName = "Disable Hellbroth";
-        public const string PluginVersion = "1.0.1";
+        public const string PluginVersion = "1.0.2";
 
         internal static BepInEx.Logging.ManualLogSource Log;
 
