@@ -1,23 +1,15 @@
-# Disable Hellbroth
+# 🚫 Disable Hellbroth
 
-PotionsPlus `Crafting Station = Disabled` for Hellbroth does not always remove recipes (e.g. workbench **Upgrade** tab → **Craft** tab can still offer Hellbroth of Flames).
+### Disable PotionsPlus Hellbroth Crafting and Use
 
-This mod:
+A Valheim mod that **hard-disables Hellbroth potions from PotionsPlus** when the configuration setting `Crafting Station = Disabled` isn't enough.
 
-- Removes Hellbroth recipes from `ObjectDB` (including after PotionsPlus re-registers them).
-- Blocks `InventoryGui.DoCrafting` for Hellbroth results.
-- Strips Hellbroth from the crafting UI recipe list.
-- Blocks drinking/using Hellbroth items.
-- Removes Odins Alchemy Wand from the item list so it cannot appear in the gamble, be crafted, or be spawned.
+Some crafting paths, such as **Workbench Upgrade → Craft**, can bypass the normal crafting-station restriction. Disable Hellbroth closes these gaps by removing Hellbroth recipes and blocking crafting and use.
 
-Install on **dedicated server and all clients**.
+## ✨ Features
 
-## Changelog
-
-### 1.0.1
-
-- Remove Odins Alchemy Wand from ObjectDB.
-
-### 1.0.0
-
-- Initial release.
+- **Removes Hellbroth recipes** from the game's `ObjectDB`, including recipes re-registered by PotionsPlus.
+- **Blocks crafting bypasses**, including the Workbench Upgrade → Craft tab.
+- **Hides Hellbroth** from the crafting interface.
+- **Prevents Hellbroth use** so existing items cannot be consumed.
+- **Removes Odin's Alchemy Wand** from `ObjectDB` to prevent it from being crafted, gambled, or spawned as an item.
